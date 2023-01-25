@@ -2,6 +2,7 @@ import { useEffect } from 'react';
 import Head from 'next/head';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
+import Posts from '@/components/Posts';
 
 export default function Home() {
 
@@ -17,7 +18,7 @@ export default function Home() {
         <Header />
         <div className='max-w-4xl mx-auto'>
           <Hero />
-
+          <Posts />
         </div>
       </div>
     </>
