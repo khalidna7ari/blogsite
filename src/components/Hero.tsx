@@ -2,7 +2,7 @@ import moment from 'moment';
 import Image from "next/image";
 const Hero = () => (
   <div className='my-6'>
-    <h1 className='my-16 text-7xl font-bold tracking-wide'>K&apos;s Dev Blog</h1>
+    <h1 className='md:my-14 my-10 lg:my-16 text-5xl md:text-6xl lg:text-7xl font-bold tracking-wide'>K&apos;s Dev Blog</h1>
     <div className='lg:flex gap-4 lg:gap-8'>
       <Image className="rounded-md aspect-video" src={'http://placekitten.com/960/500'} width={600} height={200} alt='cute cat' />
       <div className='lg:space-y-2 space-y-2 lg:my-0 my-4 max-w-prose lg:max-w-full flex flex-col'>
