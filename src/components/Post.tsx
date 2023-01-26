@@ -1,18 +1,20 @@
+import { Moment } from "moment";
+
+import { Post } from "@/types/Post";
 import Image from "next/image";
 
+
 type Props = {
-  date: Date,
-  title: string,
-  description: string,
-  image: string
+  date: string,
+  post: Post 
 }
 
-const Post = ({ date, title, description, image }: Props) => (
+const Post = ({ date, post }: Props) => (
   <div>
-    <Image src={image} width={400} alt="cat" />
-    <small>{date.toString()}</small>
-    <h3>{title}</h3>
-    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Commodi architecto fugiat ipsum provident beatae magnam harum modi fuga, necessitatibus neque tenetur perferendis eaque corrupti itaque quos. Iure nesciunt quibusdam officiis.</p>
+    <Image className="rounded-md object-cover h-[400px] w-[400px]" src={post.imgSrc} width={400} height={400} alt="cat" />
+    <small className="text-xs font-semibold mt-4 mb-2 block text-slate-500 tracking-widest">{date}</small>
+    <h3 className="text-2xl my-4 font-medium">{post.title}</h3>
+    <p className="font-light">{post.body}</p>
   </div>
 );
 

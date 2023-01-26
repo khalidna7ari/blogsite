@@ -1,17 +1,15 @@
 import moment from 'moment';
 import Post from "./Post";
+import { posts } from '@/data';
 
-interface Posts {
-  
-}
-
-type Props = {
-  posts: Posts[]
-}
-
-const Posts = ({ posts }: Props) => (
+const Posts = () => (
   <div>
-    <Post />
+    <h2 className='text-4xl font-bold mb-6'>Recent Posts 👇</h2>
+    <div className='grid grid-cols-3 gap-6'>
+      {posts.slice(0, 6).map(post => (
+        <Post key={post.id} date={moment().format('MMMM Do YYYY')} post={post} />
+      ) )}
+    </div>
   </div>
 )
 
